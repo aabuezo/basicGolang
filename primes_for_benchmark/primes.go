@@ -1,4 +1,5 @@
 // move primes.c out of here!
+// compile with: gcc primes.c -o primes -lm
 package main
 
 import (
@@ -8,13 +9,13 @@ import (
 )
 
 const LEN = 0
-const CAPACITY = 100000
+const CAPACITY = 700000 // there are no more than ~7% of primes in N
 
 var listOfPrimes []int = make([]int, LEN, CAPACITY)
 
 func main() {
 
-	number := 10000000
+	number := 10000000 // N
 	fmt.Println("Prime numbers in ", number)
 	fmt.Println("Golang")
 	start := time.Now()
@@ -30,8 +31,8 @@ func main() {
 
 func IsPrime(number int) bool {
 
-	num := int(math.Sqrt(float64(number)))
-	for i := 2; i <= num; i++ {
+	sqr := int(math.Sqrt(float64(number)))
+	for i := 2; i <= sqr; i++ {
 		if (number % i) == 0 {
 			return false
 		}

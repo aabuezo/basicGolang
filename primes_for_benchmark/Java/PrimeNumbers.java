@@ -43,7 +43,8 @@ public class PrimeNumbers {
 
     public static boolean isPrime(int number) {
 
-        for (int i = 2; i <= Math.sqrt(number); i++) {
+        int sqr = (int)Math.sqrt(number);
+        for (int i = 2; i <= sqr; i++) {
             if (number % i == 0) return false;
         }
         ++count;

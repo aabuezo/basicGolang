@@ -4,9 +4,9 @@
 
 #define TRUE	1
 #define FALSE	0
-#define SIZE	1000000
+#define SIZE	700000	// There are no more than ~7% of primes in N
 
-int number = 10000000;
+int number = 10000000;	// N
 int total = 0;
 int lst[SIZE];
 
@@ -19,8 +19,8 @@ void init_array() {
 
 
 int is_prime(int num) {
-	int sqt = (int)sqrt(num);
-	for (int i = 2; i <= sqt; i++) {
+	int sqr = (int)sqrt(num);
+	for (int i = 2; i <= sqr; i++) {
 		if (num % i == 0) {
 			return FALSE;
 		} 
