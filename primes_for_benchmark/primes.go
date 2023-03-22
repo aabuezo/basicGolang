@@ -1,3 +1,4 @@
+// Primes fills a list (slice) of primes from 1 to N and calculates the time it takes
 package main
 
 import (
@@ -6,13 +7,15 @@ import (
 	"time"
 )
 
-// N
+// NUMBER find ell primes from 1 to NUMBER
 const NUMBER = 10000000
 
 // LEN set to 0 to start appending primes at the very beginning
 const LEN = 0
 
-// CAPACITY set to 700k because there are no more than ~7% of primes in N
+// CAPACITY is set to (NUMBER * .7) because for N > 10M, the number of primes
+// tend to be less than 7%. For smaller Ns there could be a little overhead
+// due to the increment in capacity, though negligible for this test
 const CAPACITY = NUMBER * .7
 
 var listOfPrimes []int = make([]int, LEN, CAPACITY)
@@ -40,6 +43,7 @@ func IsPrime(number int) bool {
 		return true
 	}
 
+	// no need to calculate sqr each time within the for loop
 	sqr := int(math.Sqrt(float64(number)))
 	for i := 2; i <= sqr; i++ {
 		if (number % i) == 0 {
@@ -49,7 +53,7 @@ func IsPrime(number int) bool {
 	return true
 }
 
-// FillListOfPrimes fills listOfPrimes with all primes in (number)
+// FillListOfPrimes fills listOfPrimes with all primes from 1 to NUMBER
 func FillListOfPrimes(number int) {
 	for i := 1; i <= number; i++ {
 		if IsPrime(i) {
