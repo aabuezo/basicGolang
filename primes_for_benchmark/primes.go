@@ -1,3 +1,4 @@
+// move primes.c out of here!
 package main
 
 import (
