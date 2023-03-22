@@ -6,16 +6,17 @@ import (
 	"time"
 )
 
+// LEN set to 0 to start appending primes at the very beginning
 const LEN = 0
 
-// there are no more than ~7% of primes in N
+// CAPACITY set to 700k because there are no more than ~7% of primes in N
 const CAPACITY = 700000
 
 var listOfPrimes []int = make([]int, LEN, CAPACITY)
 
 func main() {
 
-	// N
+	// N set to 10 millon for benchmark
 	number := 10000000
 	fmt.Println("Prime numbers in ", number)
 	fmt.Println("Golang")
