@@ -1,3 +1,4 @@
+// compile with: gcc primes.c -o primes -lm
 #include <stdio.h>
 #include <time.h>
 #include <math.h>

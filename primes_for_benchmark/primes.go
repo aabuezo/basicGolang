@@ -1,5 +1,4 @@
 // move primes.c out of here!
-// compile with: gcc primes.c -o primes -lm
 package main
 
 import (
