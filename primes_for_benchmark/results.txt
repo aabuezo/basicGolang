@@ -9,12 +9,6 @@ took:  71.22210502624512 seconds
 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, ...
 Total primes in 10000000: 664580
 
-Prime numbers in  10000000
-Golang
-took: 3.279035521s
-1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, ...
-Total primes in 10000000: 664580
-
 Prime numbers in 10000000
 C language
 took: 2.989663 seconds
@@ -27,3 +21,23 @@ Java
 took: 2.897000 seconds
 1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, ...
 Total primes in 10000000: 664580
+
+Prime numbers in  10000000
+Golang
+took: 2.785156773s
+1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, ...
+Total primes in 10000000: 664580
+
+Benchmark: go test -bench .
+goos: linux
+goarch: amd64
+pkg: example.com/username/repo/primes_for_benchmark
+cpu: AMD Ryzen 7 PRO 5850U with Radeon Graphics     
+BenchmarkFillListOfPrimes-16                   1        2783011642 ns/op
+PASS
+ok      example.com/username/repo/primes_for_benchmark  2.786s
+
+
+Also ran:
+go test -coverprofile cover.out
+go tool cover -html=cover.out -o coverage.html 

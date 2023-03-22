@@ -6,34 +6,36 @@ import (
 	"time"
 )
 
+// N
+const NUMBER = 10000000
+
 // LEN set to 0 to start appending primes at the very beginning
 const LEN = 0
 
 // CAPACITY set to 700k because there are no more than ~7% of primes in N
-const CAPACITY = 700000
+const CAPACITY = NUMBER * .7
 
 var listOfPrimes []int = make([]int, LEN, CAPACITY)
 
 func main() {
 
-	// N set to 10 millon for benchmark
-	number := 10000000
-	fmt.Println("Prime numbers in ", number)
+	fmt.Println("Prime numbers in ", NUMBER)
 	fmt.Println("Golang")
 	start := time.Now()
 
-	FillListOfPrimes(number)
+	FillListOfPrimes(NUMBER)
 
 	elapsed := time.Since(start)
 	fmt.Printf("took: %s\n", elapsed)
 
 	PrintListOfPrimes(20)
-	fmt.Printf("Total primes in %d: %d\n", number, len(listOfPrimes))
+	fmt.Printf("Total primes in %d: %d\n", NUMBER, len(listOfPrimes))
 }
 
 // IsPrime checks if a specific number is prime or not
 func IsPrime(number int) bool {
 
+	// special case since 2 is the only even prime number
 	if number == 2 {
 		return true
 	}

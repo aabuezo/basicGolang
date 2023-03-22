@@ -1,0 +1,14 @@
+mode: set
+example.com/username/repo/primes_for_benchmark/primes.go:17.13,32.2 9 0
+example.com/username/repo/primes_for_benchmark/primes.go:35.31,37.17 1 1
+example.com/username/repo/primes_for_benchmark/primes.go:37.17,39.3 1 1
+example.com/username/repo/primes_for_benchmark/primes.go:41.2,42.28 2 1
+example.com/username/repo/primes_for_benchmark/primes.go:42.28,43.24 1 1
+example.com/username/repo/primes_for_benchmark/primes.go:43.24,45.4 1 1
+example.com/username/repo/primes_for_benchmark/primes.go:47.2,47.13 1 1
+example.com/username/repo/primes_for_benchmark/primes.go:51.35,52.31 1 0
+example.com/username/repo/primes_for_benchmark/primes.go:52.31,53.17 1 0
+example.com/username/repo/primes_for_benchmark/primes.go:53.17,55.4 1 0
+example.com/username/repo/primes_for_benchmark/primes.go:60.31,61.25 1 0
+example.com/username/repo/primes_for_benchmark/primes.go:61.25,63.3 1 0
+example.com/username/repo/primes_for_benchmark/primes.go:64.2,64.20 1 0
